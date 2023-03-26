@@ -3,7 +3,7 @@
  * @author Ralvine(ralvine@163.com)
  * @date   Unknown
  *
- * @brief  
+ * @brief  用于开发过程中进行测试的临时代码.
  *
  *
  */
@@ -12,17 +12,46 @@
 // 目前考虑通过构造函数来生成f和边值函数,其余参数直接由json文件传入.
 
 
+/* 然后进行 Grid 类的测试 */
 
-/* 测试网格生成
+#include<iostream>
+#include "Grid.h"
 
 int main() {
-    Grid
+    Grid g(3);
+    // std::cout << g.getPoint(2).num << std::endl; // 测试编号<->点的双射正确性
     return 0;
 }
 
- */
 
-/* 传入参数,测试函数类及其泊松方程的生成. */
+
+
+/* 测试网格点的数据结构 
+
+#include <iostream>
+#include <vector>
+#include "Grid.h"
+
+int main() {
+    int m=10;
+    std::vector<std::vector<Point>> web;
+    for(int i=0; i<=m+1; i++) {
+        std::vector<Point> temp;
+        for(int j=0; j<=m+1; j++) {
+            Point p(i,j,3);
+            temp.push_back(p);
+            // temp[j].print(); // 测试vector正确性及其输出.
+        }
+        web.push_back(temp);
+    }
+    // for(int i=0; i<=m+1; i++)
+    //     for(int j=0; j<=m+1; j++)
+    //         web[i][j].print();
+    return 0;
+}
+*/
+
+/* 传入参数,测试函数类及其泊松方程的生成. 
 
 #include <iostream>
 #include <fstream>
@@ -96,6 +125,7 @@ int main() {
     return 0;
 }
 
+*/
 
 
 /* 测试一下json输入.

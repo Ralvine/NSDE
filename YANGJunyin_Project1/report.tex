@@ -1,0 +1,46 @@
+\documentclass{ctexart}
+
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm,marginparwidth=1.75cm]{geometry}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{abstract}
+\usepackage{fancyhdr}
+\usepackage{enumitem} 
+\usepackage{multicol}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage[hidelinks]{hyperref}
+
+\setlength\columnsep{1cm}
+\pagenumbering{arabic}
+\CTEXsetup[format={\Large\bfseries}]{section}
+
+\title{微分方程数值解 项目作业报告}
+\author{杨钧尹\\ \small{3200103573}}
+\date{}
+\makeatletter
+\let\runtitle\@title
+\renewcommand{\abstractname}{\large 摘要\\}
+
+\pagestyle{fancy}
+\fancyhead[C]{微分方程数值解项目作业报告}
+\fancyhead[R]{2023/03/20}
+\fancyhead[L]{杨钧尹}
+
+\begin{document}
+
+\maketitle
+
+
+目前只考虑了圆形区域$\Omega$与正方形区域$D$无交点情形下（即圆在正方形内部或正方形在圆的内部）的区域连通性检查及其进一步的计算。
+
+对舍入误差的考量：显著小于计算误差
+
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 

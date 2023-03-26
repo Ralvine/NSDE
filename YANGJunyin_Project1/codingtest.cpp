@@ -1,5 +1,5 @@
 /**
- * @file   Codingtest.cpp
+ * @file   test.cpp
  * @author Ralvine(ralvine@163.com)
  * @date   Unknown
  *
@@ -9,9 +9,48 @@
  */
 
 
+/**
+ * @file   test.cpp
+ * @author Ralvine(ralvine@163.com)
+ * @date   The March 22 23:01:23 2023
+ *
+ * @brief  用于计算和测试的主程序.
+ *
+ *
+ */
+
+#include <iostream>
+#include <fstream>
+#include <json/json.h>
+#include <cmath>
+#include "Function.h"
+#include "Poisson.h"
+#include "Grid.h"
+#include "BVPSolver.h"
+#include <eigen3/Eigen/Dense>
+#include <eigen3/Eigen/Core>
+
+class Realfunc1: public Function {
+public:
+    double operator()(double x, double y) {
+        return exp(y+sin(x));
+    }
+};
+
+
+int main() {
+    Realfunc1 u1;
+    std::cout << u1(1,2) << std::endl;
+
+    return 0;
+}
+
+
+
+
 // 目前考虑通过构造函数来生成f和边值函数,其余参数直接由json文件传入.
 
-/* Solver 的参数传入测试 */
+/* Solver 的参数传入测试 
 
 #include <iostream>
 #include <fstream>
@@ -90,8 +129,7 @@ int main() {
     return 0;
 }
 
-
-
+*/
 
 
 

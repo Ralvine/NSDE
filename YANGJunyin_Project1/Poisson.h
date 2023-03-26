@@ -43,6 +43,27 @@ public:
             std::cout << "Radius:" << Radius << std::endl;
         }
     }
+    std::string getDomainType() {
+        return DomainType;
+    }
+    std::string getBVType() {
+        return BVType;
+    }
+    Function &getrhs() {
+        return rhs;
+    }
+    Function &getbv() {
+        return bv;
+    }
+    int getCenterx() {
+        return Centerx;
+    }
+    int getCentery() {
+        return Centery;
+    }
+    int getRadius() {
+        return Radius;
+    }
 };
 
 
